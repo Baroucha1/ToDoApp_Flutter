@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
+        backgroundColor: Colors.deepPurple[100],
         appBar: AppBar(
           title: Text("My App Bar"),
           backgroundColor: Colors.deepPurple,
@@ -21,21 +21,30 @@ class MyApp extends StatelessWidget {
           leading: Icon(Icons.menu),
           actions: [IconButton(onPressed: (){}, icon: Icon(Icons.logout))],
         ),
-        body: Center (
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(20)
+        body: ListView(
+          children: [
+            Expanded(
+              child: Container(
+               height: 350,
+                color: Colors.deepPurple,
+              ),
             ),
-            padding: EdgeInsets.all(25),
-            child: Icon(
-              Icons.favorite,
-              size: 50,
-              color: Colors.white,)
-          ),
-        ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                height: 350,
+                color: Colors.deepPurple[300],
+              ),
+            ),
+            Expanded(
+              child: Container(
+            height: 350,
+                
+                color: Colors.deepPurple[200],
+              ),
+            )
+          ],
+        )
       ),
       debugShowCheckedModeBanner: false,
     );
