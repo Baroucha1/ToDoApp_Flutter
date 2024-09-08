@@ -8,6 +8,9 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  void userTapped(){
+    print("user tapped");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,29 +24,20 @@ class MyApp extends StatelessWidget {
           leading: Icon(Icons.menu),
           actions: [IconButton(onPressed: (){}, icon: Icon(Icons.logout))],
         ),
-        body: ListView(
-          children: [
-            Expanded(
-              child: Container(
-               height: 350,
-                color: Colors.deepPurple,
+        body: Center(
+          child: GestureDetector(
+            onTap: (){
+              userTapped();
+            },
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple[200],
+              child: Center(
+                child: Text("Tap me"),
               ),
             ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                height: 350,
-                color: Colors.deepPurple[300],
-              ),
-            ),
-            Expanded(
-              child: Container(
-            height: 350,
-                
-                color: Colors.deepPurple[200],
-              ),
-            )
-          ],
+          ),
         )
       ),
       debugShowCheckedModeBanner: false,
