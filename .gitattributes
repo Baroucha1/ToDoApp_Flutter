@@ -1,2 +1,33 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Dart files (Flutter project)
+*.dart               text eol=lf
+
+# Text files
+*.yaml               text eol=lf
+*.xml                text eol=lf
+*.json               text eol=lf
+*.gradle             text eol=lf
+*.properties         text eol=lf
+*.md                 text eol=lf
+
+# Android Studio / IntelliJ project files
+*.iml                text eol=lf
+.idea/*              text eol=lf
+*.pro                text eol=lf
+
+# Flutter specific
+android/**/GeneratedPluginRegistrant.java binary
+ios/**/GeneratedPluginRegistrant.*        binary
+
+# Images (treat as binary)
+*.png               binary
+*.jpg               binary
+*.jpeg              binary
+*.gif               binary
+
+# Don't track generated files
+pubspec.lock        binary
+**/build/*          binary
+**/.dart_tool/*     binary
+**/ios/Pods/*       binary
