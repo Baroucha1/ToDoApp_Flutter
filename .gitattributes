@@ -1,3 +1,5 @@
+* text=auto
+
 # Dart files (Flutter project)
 *.dart               text eol=lf
 
@@ -14,18 +16,18 @@
 .idea/*              text eol=lf
 *.pro                text eol=lf
 
-# Flutter specific
-android/**/GeneratedPluginRegistrant.java binary
-ios/**/GeneratedPluginRegistrant.*        binary
+# Flutter specific (mark these files as generated to reduce their impact on GitHub's language statistics)
+android/**/GeneratedPluginRegistrant.java linguist-generated
+ios/**/GeneratedPluginRegistrant.*        linguist-generated
 
-# Native C++ / CMake files for Android and iOS
-*.cpp                text eol=lf
-*.h                  text eol=lf
-*.c                  text eol=lf
-*.m                  text eol=lf
-*.mm                 text eol=lf
-*.swift              text eol=lf
-CMakeLists.txt       text eol=lf
+# Native C++ / CMake files for Android and iOS (mark as ignored to prevent misclassification)
+*.cpp                linguist-vendored
+*.h                  linguist-vendored
+*.c                  linguist-vendored
+*.m                  linguist-vendored
+*.mm                 linguist-vendored
+*.swift              linguist-vendored
+CMakeLists.txt       linguist-vendored
 
 # Images (treat as binary)
 *.png                binary
@@ -38,4 +40,4 @@ pubspec.lock         binary
 **/build/*           binary
 **/.dart_tool/*      binary
 **/ios/Pods/*        binary
-**/android/.cxx/*    binary
+**/android/.cxx/*    linguist-vendored
