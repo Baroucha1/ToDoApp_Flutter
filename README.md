@@ -12,8 +12,10 @@ A simple and intuitive ToDo app built using Flutter to manage daily tasks effici
 
 ## Screenshots
 
-![Home Screen]![1](https://github.com/user-attachments/assets/204f5c02-465f-4198-ad7f-7ca9129cf7b9)
-![Add Task Screen]![2](https://github.com/user-attachments/assets/332a620a-0094-4668-a0ad-d06222d6b62b)
+![1](https://github.com/user-attachments/assets/204f5c02-465f-4198-ad7f-7ca9129cf7b9)
+
+
+![2](https://github.com/user-attachments/assets/332a620a-0094-4668-a0ad-d06222d6b62b)
 
 ## Installation
 
